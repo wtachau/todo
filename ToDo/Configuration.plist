@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Debug</key>
+	<dict>
+		<key>LoggingEnabled</key>
+		<true/>
+		<key>APIEndpoint</key>
+		<string>https://todo.ngrok.io/</string>
+	</dict>
+	<key>Staging</key>
+	<dict>
+		<key>APIEndpoint</key>
+		<string>https://j1mie55psf.execute-api.us-east-1.amazonaws.com/dev/</string>
+		<key>LoggingEnabled</key>
+		<false/>
+		<key>SegmentKey</key>
+		<string>bAWzMeAMPAUhu55YC8HfbOW0QRemnG5V</string>
+	</dict>
+	<key>Development</key>
+	<dict>
+		<key>APIEndpoint</key>
+		<string>https://j1mie55psf.execute-api.us-east-1.amazonaws.com/dev/</string>
+		<key>LoggingEnabled</key>
+		<true/>
+		<key>SegmentKey</key>
+		<string></string>
+	</dict>
+	<key>Release</key>
+	<dict>
+		<key>APIEndpoint</key>
+		<string>https://j1mie55psf.execute-api.us-east-1.amazonaws.com/dev/</string>
+		<key>LoggingEnabled</key>
+		<false/>
+		<key>SegmentKey</key>
+		<string>nbWSUvzclgGjZ2v8CkUYR50E4eC4ZDOR</string>
+	</dict>
+</dict>
+</plist>

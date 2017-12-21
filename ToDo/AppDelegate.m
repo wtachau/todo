@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "Logging.h"
+#import "EntriesViewController.h"
+#import "ServerConfiguration.h"
+@import Intents;
+
 
 @interface AppDelegate ()
 
@@ -17,6 +22,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Logging setupLogger];
+    log_prefix(@"asdf", @"test");
+    base_log(@"asdf", true);
+    bool test = [ServerConfiguration isLoggingEnabled];
+    
+    
+    self.window.rootViewController = [[EntriesViewController alloc] init];
+    
     return YES;
 }
 
