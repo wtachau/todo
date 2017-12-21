@@ -1,0 +1,45 @@
+PODS:
+  - CocoaAsyncSocket (7.6.2)
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
+  - OriginateAutoLayout (0.0.3)
+  - OriginateHTTP (0.1.0)
+  - PaperTrailLumberjack (2.0.0):
+    - CocoaAsyncSocket
+    - CocoaLumberjack (~> 2.2.0)
+
+DEPENDENCIES:
+  - Mantle (~> 2.0.6)
+  - OriginateAutoLayout
+  - OriginateHTTP
+  - PaperTrailLumberjack (from `https://github.com/greenbits/papertrail-lumberjack-ios.git`)
+
+EXTERNAL SOURCES:
+  PaperTrailLumberjack:
+    :git: https://github.com/greenbits/papertrail-lumberjack-ios.git
+
+CHECKOUT OPTIONS:
+  PaperTrailLumberjack:
+    :commit: d019eccaeeb5a29a1a271f4d900924e8c202cb2b
+    :git: https://github.com/greenbits/papertrail-lumberjack-ios.git
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
+  OriginateAutoLayout: 02b99cee4d275e9a6ec5faef108c4542f75b18af
+  OriginateHTTP: c90c8b9d4113767352ee2f382cf5a7e6c79b5cde
+  PaperTrailLumberjack: 3ff66ec8487bd2f68c894ba3040ae0c506a41a53
+
+PODFILE CHECKSUM: aecc7fcc1da47f52b1ecde0f0e838262659a8701
+
+COCOAPODS: 1.2.1

@@ -1,0 +1,28 @@
+{
+  "name": "PaperTrailLumberjack",
+  "version": "2.0.0",
+  "summary": "A CocoaLumberjack logger to post logs to papertrailapp.com",
+  "description": "A CocoaLumberjack logger to post log messages to papertrailapp.com. Currently, only posts via unsecured UDP sockets.",
+  "homepage": "http://github.com/greenbits/papertrail-lumberjack-ios",
+  "license": "MIT",
+  "authors": {
+    "George Malayil Philip": "george.malayil@roguemonkey.in"
+  },
+  "source": {
+    "git": "https://github.com/greenbits/papertrail-lumberjack-ios.git",
+    "tag": "2.0.0"
+  },
+  "platforms": {
+    "ios": "5.0"
+  },
+  "requires_arc": true,
+  "source_files": "Classes",
+  "dependencies": {
+    "CocoaLumberjack": [
+      "~> 2.2.0"
+    ],
+    "CocoaAsyncSocket": [
+
+    ]
+  }
+}

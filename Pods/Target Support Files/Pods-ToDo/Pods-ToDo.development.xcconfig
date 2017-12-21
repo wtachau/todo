@@ -1,0 +1,9 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" "${PODS_ROOT}/Headers/Public/CocoaLumberjack" "${PODS_ROOT}/Headers/Public/Mantle" "${PODS_ROOT}/Headers/Public/OriginateAutoLayout" "${PODS_ROOT}/Headers/Public/OriginateHTTP" "${PODS_ROOT}/Headers/Public/PaperTrailLumberjack"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/CocoaAsyncSocket" "$PODS_CONFIGURATION_BUILD_DIR/CocoaLumberjack" "$PODS_CONFIGURATION_BUILD_DIR/Mantle-iOS" "$PODS_CONFIGURATION_BUILD_DIR/OriginateAutoLayout" "$PODS_CONFIGURATION_BUILD_DIR/OriginateHTTP" "$PODS_CONFIGURATION_BUILD_DIR/PaperTrailLumberjack"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" -isystem "${PODS_ROOT}/Headers/Public/CocoaLumberjack" -isystem "${PODS_ROOT}/Headers/Public/Mantle" -isystem "${PODS_ROOT}/Headers/Public/OriginateAutoLayout" -isystem "${PODS_ROOT}/Headers/Public/OriginateHTTP" -isystem "${PODS_ROOT}/Headers/Public/PaperTrailLumberjack"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"CocoaAsyncSocket" -l"CocoaLumberjack" -l"Mantle-iOS" -l"OriginateAutoLayout" -l"OriginateHTTP" -l"PaperTrailLumberjack" -framework "CFNetwork" -framework "Foundation" -framework "Security"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
