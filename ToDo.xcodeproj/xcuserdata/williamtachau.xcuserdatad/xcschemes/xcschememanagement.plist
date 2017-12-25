@@ -12,7 +12,7 @@
 		<key>ToDoMac.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>13</integer>
 		</dict>
 		<key>TodoIntents.xcscheme</key>
 		<dict>
@@ -32,6 +32,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>B86E754F1FEBD39B00716F64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B8AA3F791FCB597500327328</key>
 		<dict>
 			<key>primary</key>

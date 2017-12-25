@@ -11,11 +11,11 @@
 
 + (void)setupLogger
 {
-    RMPaperTrailLogger *paperTrailLogger = [RMPaperTrailLogger sharedInstance];
-    paperTrailLogger.host = @"logs4.papertrailapp.com";
-    paperTrailLogger.port = 36059;
-    //        paperTrailLogger.debug = NO; //Silences some NSLogging
-    [DDLog addLogger:paperTrailLogger];
+//    RMPaperTrailLogger *paperTrailLogger = [RMPaperTrailLogger sharedInstance];
+//    paperTrailLogger.host = @"logs4.papertrailapp.com";
+//    paperTrailLogger.port = 36059;
+//    //        paperTrailLogger.debug = NO; //Silences some NSLogging
+//    [DDLog addLogger:paperTrailLogger];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "EntryService.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    [EntryService fetchAllGamesWithSuccess:^(NSArray<Entry *> *entries) {
+        NSLog(@"TEXT");
+    } failure:^(NSString *error) {
+        NSLog(@"ERROR: > %@", error);
+    }];
 }
 
 

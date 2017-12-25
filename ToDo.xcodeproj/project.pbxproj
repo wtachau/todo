@@ -7,26 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74F74BC5862A54758279E1EF /* libPods-ToDoMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7A38B03EDDE7E7FF084C20 /* libPods-ToDoMac.a */; };
 		79FE2210437CEBF63859FFB2 /* libPods-ToDo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 355445AD4260B70BFA131C56 /* libPods-ToDo.a */; };
 		B86E754B1FE5EAB800716F64 /* PersistedUserID.m in Sources */ = {isa = PBXBuildFile; fileRef = B86E754A1FE5EAB800716F64 /* PersistedUserID.m */; };
 		B86E75541FEBD39B00716F64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B86E75531FEBD39B00716F64 /* AppDelegate.m */; };
 		B86E75561FEBD39B00716F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86E75551FEBD39B00716F64 /* Assets.xcassets */; };
 		B86E75591FEBD39B00716F64 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86E75571FEBD39B00716F64 /* MainMenu.xib */; };
 		B86E755C1FEBD39B00716F64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B86E755B1FEBD39B00716F64 /* main.m */; };
-		B87EF2861FEBE0B80064D622 /* TodoSharedFrameworkMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86E759F1FEBDE0100716F64 /* TodoSharedFrameworkMac.framework */; };
-		B87EF2871FEBE0C60064D622 /* TodoSharedFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86E758F1FEBDD7B00716F64 /* TodoSharedFramework.framework */; };
-		B87EF2881FEBE1A80064D622 /* libPods-ToDo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 355445AD4260B70BFA131C56 /* libPods-ToDo.a */; };
+		B87EF29C1FEC25590064D622 /* libPods-ToDoMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B87EF29D1FEC25590064D622 /* libPods-ToDoMac.a */; };
+		B87EF29E1FEC2B500064D622 /* EntryService.h in Sources */ = {isa = PBXBuildFile; fileRef = B89983031FDE578C006853D0 /* EntryService.h */; };
+		B87EF29F1FEC2B750064D622 /* EntryService.h in Sources */ = {isa = PBXBuildFile; fileRef = B89983031FDE578C006853D0 /* EntryService.h */; };
+		B87EF2A01FEC2B750064D622 /* EntryService.m in Sources */ = {isa = PBXBuildFile; fileRef = B89983041FDE578C006853D0 /* EntryService.m */; };
+		B87EF2A31FEC2B750064D622 /* PersistedUserID.h in Sources */ = {isa = PBXBuildFile; fileRef = B86E75491FE5EAB800716F64 /* PersistedUserID.h */; };
+		B87EF2A41FEC2B750064D622 /* PersistedUserID.m in Sources */ = {isa = PBXBuildFile; fileRef = B86E754A1FE5EAB800716F64 /* PersistedUserID.m */; };
+		B87EF2A51FEC2B750064D622 /* NetworkingClient.h in Sources */ = {isa = PBXBuildFile; fileRef = B89983061FDE5969006853D0 /* NetworkingClient.h */; };
+		B87EF2A61FEC2B750064D622 /* NetworkingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B89983071FDE5969006853D0 /* NetworkingClient.m */; };
+		B87EF2A71FEC2B750064D622 /* ServerConfiguration.h in Sources */ = {isa = PBXBuildFile; fileRef = B899830C1FDE5BF8006853D0 /* ServerConfiguration.h */; };
+		B87EF2A81FEC2B750064D622 /* ServerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B899830D1FDE5BF8006853D0 /* ServerConfiguration.m */; };
+		B87EF2A91FEC2B750064D622 /* Entry.h in Sources */ = {isa = PBXBuildFile; fileRef = B87EF2971FEC228F0064D622 /* Entry.h */; };
+		B87EF2AA1FEC2B750064D622 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = B87EF2981FEC228F0064D622 /* Entry.m */; };
+		B87EF2AD1FEC2D1E0064D622 /* Logging.h in Sources */ = {isa = PBXBuildFile; fileRef = B89983161FDE61C1006853D0 /* Logging.h */; };
+		B87EF2AE1FEC2D1E0064D622 /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = B89983151FDE61C1006853D0 /* Logging.m */; };
+		B87EF2AF1FEC2D1E0064D622 /* ModelDateHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = B89982FE1FDE0F26006853D0 /* ModelDateHelper.h */; };
+		B87EF2B01FEC2D1E0064D622 /* ModelDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982FF1FDE0F26006853D0 /* ModelDateHelper.m */; };
+		B87EF2B11FED7C000064D622 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = B899830F1FDE5F60006853D0 /* Configuration.plist */; };
+		B87EF2B41FEDCF6F0064D622 /* AddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87EF2B31FEDCF6F0064D622 /* AddEntryViewController.m */; };
 		B89982F71FDE05C4006853D0 /* EntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982F61FDE05C3006853D0 /* EntriesViewController.m */; };
 		B89982FA1FDE0A6D006853D0 /* EntriesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982F91FDE0A6D006853D0 /* EntriesDataSource.m */; };
-		B89982FD1FDE0B29006853D0 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982FC1FDE0B29006853D0 /* Entry.m */; };
 		B89983001FDE0F26006853D0 /* ModelDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982FF1FDE0F26006853D0 /* ModelDateHelper.m */; };
 		B89983051FDE578C006853D0 /* EntryService.m in Sources */ = {isa = PBXBuildFile; fileRef = B89983041FDE578C006853D0 /* EntryService.m */; };
 		B89983081FDE5969006853D0 /* NetworkingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B89983071FDE5969006853D0 /* NetworkingClient.m */; };
-		B899830B1FDE5ACC006853D0 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = B899830A1FDE5ACC006853D0 /* Authorization.m */; };
 		B899830E1FDE5BF8006853D0 /* ServerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B899830D1FDE5BF8006853D0 /* ServerConfiguration.m */; };
 		B89983101FDE5F60006853D0 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = B899830F1FDE5F60006853D0 /* Configuration.plist */; };
 		B89983171FDE61C1006853D0 /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = B89983151FDE61C1006853D0 /* Logging.m */; };
+		B8A82F9B1FF0293D0054657A /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A82F9A1FF0293D0054657A /* Type.m */; };
+		B8A82F9C1FF0444D0054657A /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = B87EF2981FEC228F0064D622 /* Entry.m */; };
 		B8AA3F7F1FCB597500327328 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AA3F7E1FCB597500327328 /* main.m */; };
 		B8AA3F821FCB597500327328 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AA3F811FCB597500327328 /* AppDelegate.m */; };
 		B8AA3F851FCB597500327328 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AA3F841FCB597500327328 /* ViewController.m */; };
@@ -42,20 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B86E758E1FEBDD7B00716F64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B86E758A1FEBDD7A00716F64 /* TodoSharedFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B86E757F1FEBDD7A00716F64;
-			remoteInfo = TodoSharedFramework;
-		};
-		B86E759E1FEBDE0100716F64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B86E758A1FEBDD7A00716F64 /* TodoSharedFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B86E75951FEBDDA400716F64;
-			remoteInfo = TodoSharedFrameworkMac;
-		};
 		B8AA3FAF1FCB6F6800327328 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B8AA3F721FCB597500327328 /* Project object */;
@@ -115,31 +115,32 @@
 		B86E755A1FEBD39B00716F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B86E755B1FEBD39B00716F64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B86E755D1FEBD39B00716F64 /* ToDoMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDoMac.entitlements; sourceTree = "<group>"; };
-		B86E75691FEBDD0E00716F64 /* TodoSharedFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoSharedFramework.h; sourceTree = "<group>"; };
-		B86E756A1FEBDD0E00716F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B86E758A1FEBDD7A00716F64 /* TodoSharedFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TodoSharedFramework.xcodeproj; path = ToDo/TodoSharedFramework/TodoSharedFramework.xcodeproj; sourceTree = "<group>"; };
+		B87EF2971FEC228F0064D622 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		B87EF2981FEC228F0064D622 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		B87EF29D1FEC25590064D622 /* libPods-ToDoMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-ToDoMac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B87EF2B21FEDCF6F0064D622 /* AddEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddEntryViewController.h; sourceTree = "<group>"; };
+		B87EF2B31FEDCF6F0064D622 /* AddEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddEntryViewController.m; sourceTree = "<group>"; };
 		B885AA0DB1B66D8ACB197E65 /* Pods-ToDoMac.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoMac.development.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoMac/Pods-ToDoMac.development.xcconfig"; sourceTree = "<group>"; };
 		B89982F51FDE05C3006853D0 /* EntriesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesViewController.h; sourceTree = "<group>"; };
 		B89982F61FDE05C3006853D0 /* EntriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesViewController.m; sourceTree = "<group>"; };
 		B89982F81FDE0A6D006853D0 /* EntriesDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesDataSource.h; sourceTree = "<group>"; };
 		B89982F91FDE0A6D006853D0 /* EntriesDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesDataSource.m; sourceTree = "<group>"; };
-		B89982FB1FDE0B29006853D0 /* Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
-		B89982FC1FDE0B29006853D0 /* Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 		B89982FE1FDE0F26006853D0 /* ModelDateHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelDateHelper.h; sourceTree = "<group>"; };
 		B89982FF1FDE0F26006853D0 /* ModelDateHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelDateHelper.m; sourceTree = "<group>"; };
-		B89983011FDE103C006853D0 /* TableViewDataSourceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		B89983011FDE103C006853D0 /* DataSourceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSourceDelegate.h; sourceTree = "<group>"; };
 		B89983021FDE55E1006853D0 /* Formatting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Formatting.h; sourceTree = "<group>"; };
 		B89983031FDE578C006853D0 /* EntryService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryService.h; sourceTree = "<group>"; };
 		B89983041FDE578C006853D0 /* EntryService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryService.m; sourceTree = "<group>"; };
 		B89983061FDE5969006853D0 /* NetworkingClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingClient.h; sourceTree = "<group>"; };
 		B89983071FDE5969006853D0 /* NetworkingClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingClient.m; sourceTree = "<group>"; };
-		B89983091FDE5ACC006853D0 /* Authorization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
-		B899830A1FDE5ACC006853D0 /* Authorization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
 		B899830C1FDE5BF8006853D0 /* ServerConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerConfiguration.h; sourceTree = "<group>"; };
 		B899830D1FDE5BF8006853D0 /* ServerConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerConfiguration.m; sourceTree = "<group>"; };
 		B899830F1FDE5F60006853D0 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		B89983151FDE61C1006853D0 /* Logging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Logging.m; sourceTree = "<group>"; };
 		B89983161FDE61C1006853D0 /* Logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		B8A82F991FF0293D0054657A /* Type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
+		B8A82F9A1FF0293D0054657A /* Type.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
+		B8A82F9D1FF0922A0054657A /* AddEntryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddEntryDelegate.h; sourceTree = "<group>"; };
 		B8AA3F7A1FCB597500327328 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AA3F7E1FCB597500327328 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8AA3F801FCB597500327328 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -168,9 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B87EF2861FEBE0B80064D622 /* TodoSharedFrameworkMac.framework in Frameworks */,
-				B87EF2881FEBE1A80064D622 /* libPods-ToDo.a in Frameworks */,
-				74F74BC5862A54758279E1EF /* libPods-ToDoMac.a in Frameworks */,
+				B87EF29C1FEC25590064D622 /* libPods-ToDoMac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +177,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B87EF2871FEBE0C60064D622 /* TodoSharedFramework.framework in Frameworks */,
 				79FE2210437CEBF63859FFB2 /* libPods-ToDo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,24 +226,6 @@
 			path = ToDoMac;
 			sourceTree = "<group>";
 		};
-		B86E75681FEBDD0E00716F64 /* TodoSharedFramework */ = {
-			isa = PBXGroup;
-			children = (
-				B86E75691FEBDD0E00716F64 /* TodoSharedFramework.h */,
-				B86E756A1FEBDD0E00716F64 /* Info.plist */,
-			);
-			path = TodoSharedFramework;
-			sourceTree = "<group>";
-		};
-		B86E758B1FEBDD7A00716F64 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B86E758F1FEBDD7B00716F64 /* TodoSharedFramework.framework */,
-				B86E759F1FEBDE0100716F64 /* TodoSharedFrameworkMac.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B86E75A01FEBDE6700716F64 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +233,8 @@
 				B8AA3F841FCB597500327328 /* ViewController.m */,
 				B89982F51FDE05C3006853D0 /* EntriesViewController.h */,
 				B89982F61FDE05C3006853D0 /* EntriesViewController.m */,
+				B87EF2B21FEDCF6F0064D622 /* AddEntryViewController.h */,
+				B87EF2B31FEDCF6F0064D622 /* AddEntryViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -260,19 +242,8 @@
 		B86E75A11FEBDE7300716F64 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				B89982F81FDE0A6D006853D0 /* EntriesDataSource.h */,
-				B89982F91FDE0A6D006853D0 /* EntriesDataSource.m */,
 			);
 			name = DataSources;
-			sourceTree = "<group>";
-		};
-		B86E75A21FEBDE7A00716F64 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B89982FB1FDE0B29006853D0 /* Entry.h */,
-				B89982FC1FDE0B29006853D0 /* Entry.m */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		B86E75A31FEBDE8100716F64 /* Services */ = {
@@ -281,60 +252,91 @@
 				B89983031FDE578C006853D0 /* EntryService.h */,
 				B89983041FDE578C006853D0 /* EntryService.m */,
 			);
-			name = Services;
-			sourceTree = "<group>";
-		};
-		B86E75A41FEBDE8800716F64 /* Authorization */ = {
-			isa = PBXGroup;
-			children = (
-				B89983091FDE5ACC006853D0 /* Authorization.h */,
-				B899830A1FDE5ACC006853D0 /* Authorization.m */,
-			);
-			name = Authorization;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B86E75A51FEBDE9300716F64 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B86E75491FE5EAB800716F64 /* PersistedUserID.h */,
+				B86E754A1FE5EAB800716F64 /* PersistedUserID.m */,
 				B89983061FDE5969006853D0 /* NetworkingClient.h */,
 				B89983071FDE5969006853D0 /* NetworkingClient.m */,
 				B899830C1FDE5BF8006853D0 /* ServerConfiguration.h */,
 				B899830D1FDE5BF8006853D0 /* ServerConfiguration.m */,
 			);
-			name = Networking;
-			sourceTree = "<group>";
-		};
-		B86E75A61FEBDE9B00716F64 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				B89983021FDE55E1006853D0 /* Formatting.h */,
-				B89983161FDE61C1006853D0 /* Logging.h */,
-				B89983151FDE61C1006853D0 /* Logging.m */,
-				B89982FE1FDE0F26006853D0 /* ModelDateHelper.h */,
-				B89982FF1FDE0F26006853D0 /* ModelDateHelper.m */,
-			);
-			name = Helpers;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		B86E75A71FEBDEA600716F64 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				B89983011FDE103C006853D0 /* TableViewDataSourceDelegate.h */,
+				B89983011FDE103C006853D0 /* DataSourceDelegate.h */,
+				B8A82F9D1FF0922A0054657A /* AddEntryDelegate.h */,
 			);
 			name = Delegates;
+			sourceTree = "<group>";
+		};
+		B87EF2991FEC228F0064D622 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B87EF2971FEC228F0064D622 /* Entry.h */,
+				B87EF2981FEC228F0064D622 /* Entry.m */,
+				B8A82F991FF0293D0054657A /* Type.h */,
+				B8A82F9A1FF0293D0054657A /* Type.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B87EF29B1FEC22F30064D622 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B8A82F941FF014620054657A /* DataSources */,
+				B87EF2AB1FEC2CF30064D622 /* Helpers */,
+				B86E75A31FEBDE8100716F64 /* Services */,
+				B86E75A51FEBDE9300716F64 /* Networking */,
+				B87EF2991FEC228F0064D622 /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B87EF2AB1FEC2CF30064D622 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B899830F1FDE5F60006853D0 /* Configuration.plist */,
+				B89982FE1FDE0F26006853D0 /* ModelDateHelper.h */,
+				B89982FF1FDE0F26006853D0 /* ModelDateHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B87EF2AC1FEC2D100064D622 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B89983161FDE61C1006853D0 /* Logging.h */,
+				B89983151FDE61C1006853D0 /* Logging.m */,
+				B89983021FDE55E1006853D0 /* Formatting.h */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		B8A82F941FF014620054657A /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				B89982F81FDE0A6D006853D0 /* EntriesDataSource.h */,
+				B89982F91FDE0A6D006853D0 /* EntriesDataSource.m */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		B8AA3F711FCB597500327328 = {
 			isa = PBXGroup;
 			children = (
-				B86E758A1FEBDD7A00716F64 /* TodoSharedFramework.xcodeproj */,
-				B86E75491FE5EAB800716F64 /* PersistedUserID.h */,
-				B86E754A1FE5EAB800716F64 /* PersistedUserID.m */,
+				B87EF29B1FEC22F30064D622 /* Shared */,
 				B8AA3F7C1FCB597500327328 /* ToDo */,
+				B86E75511FEBD39B00716F64 /* ToDoMac */,
 				B8AA3F9A1FCB6F6800327328 /* TodoIntents */,
 				B8AA3FA71FCB6F6800327328 /* TodoIntentsUI */,
-				B86E75511FEBD39B00716F64 /* ToDoMac */,
-				B86E75681FEBDD0E00716F64 /* TodoSharedFramework */,
 				B8AA3FA41FCB6F6800327328 /* Frameworks */,
 				B8AA3F7B1FCB597500327328 /* Products */,
 				A188A651E75C6DE5F674D407 /* Pods */,
@@ -355,22 +357,12 @@
 		B8AA3F7C1FCB597500327328 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
-				B8AA3F941FCB6F1900327328 /* ToDo.entitlements */,
 				B8AA3F801FCB597500327328 /* AppDelegate.h */,
 				B8AA3F811FCB597500327328 /* AppDelegate.m */,
+				B87EF2AC1FEC2D100064D622 /* Helpers */,
 				B86E75A01FEBDE6700716F64 /* ViewControllers */,
 				B86E75A11FEBDE7300716F64 /* DataSources */,
-				B86E75A21FEBDE7A00716F64 /* Models */,
-				B86E75A31FEBDE8100716F64 /* Services */,
-				B86E75A41FEBDE8800716F64 /* Authorization */,
-				B86E75A51FEBDE9300716F64 /* Networking */,
-				B86E75A61FEBDE9B00716F64 /* Helpers */,
 				B86E75A71FEBDEA600716F64 /* Delegates */,
-				B8AA3F861FCB597500327328 /* Main.storyboard */,
-				B8AA3F891FCB597500327328 /* Assets.xcassets */,
-				B8AA3F8B1FCB597500327328 /* LaunchScreen.storyboard */,
-				B8AA3F8E1FCB597500327328 /* Info.plist */,
-				B899830F1FDE5F60006853D0 /* Configuration.plist */,
 				B8AA3F7D1FCB597500327328 /* Supporting Files */,
 			);
 			path = ToDo;
@@ -379,6 +371,11 @@
 		B8AA3F7D1FCB597500327328 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8AA3F861FCB597500327328 /* Main.storyboard */,
+				B8AA3F891FCB597500327328 /* Assets.xcassets */,
+				B8AA3F8B1FCB597500327328 /* LaunchScreen.storyboard */,
+				B8AA3F941FCB6F1900327328 /* ToDo.entitlements */,
+				B8AA3F8E1FCB597500327328 /* Info.plist */,
 				B8AA3F7E1FCB597500327328 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -397,6 +394,7 @@
 		B8AA3FA41FCB6F6800327328 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B87EF29D1FEC25590064D622 /* libPods-ToDoMac.a */,
 				B8AA3FA51FCB6F6800327328 /* IntentsUI.framework */,
 				355445AD4260B70BFA131C56 /* libPods-ToDo.a */,
 				1E7A38B03EDDE7E7FF084C20 /* libPods-ToDoMac.a */,
@@ -509,6 +507,11 @@
 						CreatedOnToolsVersion = 9.1;
 						DevelopmentTeam = WD8H86S6CT;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					B8AA3F791FCB597500327328 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -546,12 +549,6 @@
 			mainGroup = B8AA3F711FCB597500327328;
 			productRefGroup = B8AA3F7B1FCB597500327328 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = B86E758B1FEBDD7A00716F64 /* Products */;
-					ProjectRef = B86E758A1FEBDD7A00716F64 /* TodoSharedFramework.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				B8AA3F791FCB597500327328 /* ToDo */,
@@ -562,28 +559,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		B86E758F1FEBDD7B00716F64 /* TodoSharedFramework.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TodoSharedFramework.framework;
-			remoteRef = B86E758E1FEBDD7B00716F64 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B86E759F1FEBDE0100716F64 /* TodoSharedFrameworkMac.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TodoSharedFrameworkMac.framework;
-			remoteRef = B86E759E1FEBDE0100716F64 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		B86E754E1FEBD39B00716F64 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87EF2B11FED7C000064D622 /* Configuration.plist in Resources */,
 				B86E75561FEBD39B00716F64 /* Assets.xcassets in Resources */,
 				B86E75591FEBD39B00716F64 /* MainMenu.xib in Resources */,
 			);
@@ -654,13 +635,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToDoMac-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B98650C612524E5D16DD6618 /* [CP] Embed Pods Frameworks */ = {
@@ -699,13 +683,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToDo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -715,6 +702,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87EF2AD1FEC2D1E0064D622 /* Logging.h in Sources */,
+				B87EF2AE1FEC2D1E0064D622 /* Logging.m in Sources */,
+				B87EF2AF1FEC2D1E0064D622 /* ModelDateHelper.h in Sources */,
+				B87EF2B01FEC2D1E0064D622 /* ModelDateHelper.m in Sources */,
+				B87EF29F1FEC2B750064D622 /* EntryService.h in Sources */,
+				B87EF2A01FEC2B750064D622 /* EntryService.m in Sources */,
+				B87EF2A31FEC2B750064D622 /* PersistedUserID.h in Sources */,
+				B87EF2A41FEC2B750064D622 /* PersistedUserID.m in Sources */,
+				B87EF2A51FEC2B750064D622 /* NetworkingClient.h in Sources */,
+				B87EF2A61FEC2B750064D622 /* NetworkingClient.m in Sources */,
+				B87EF2A71FEC2B750064D622 /* ServerConfiguration.h in Sources */,
+				B87EF2A81FEC2B750064D622 /* ServerConfiguration.m in Sources */,
+				B87EF2A91FEC2B750064D622 /* Entry.h in Sources */,
+				B87EF2AA1FEC2B750064D622 /* Entry.m in Sources */,
 				B86E755C1FEBD39B00716F64 /* main.m in Sources */,
 				B86E75541FEBD39B00716F64 /* AppDelegate.m in Sources */,
 			);
@@ -724,16 +725,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8A82F9C1FF0444D0054657A /* Entry.m in Sources */,
+				B87EF29E1FEC2B500064D622 /* EntryService.h in Sources */,
 				B89983081FDE5969006853D0 /* NetworkingClient.m in Sources */,
-				B899830B1FDE5ACC006853D0 /* Authorization.m in Sources */,
 				B89983001FDE0F26006853D0 /* ModelDateHelper.m in Sources */,
-				B89982FD1FDE0B29006853D0 /* Entry.m in Sources */,
 				B8AA3F851FCB597500327328 /* ViewController.m in Sources */,
 				B899830E1FDE5BF8006853D0 /* ServerConfiguration.m in Sources */,
 				B89982FA1FDE0A6D006853D0 /* EntriesDataSource.m in Sources */,
 				B89983051FDE578C006853D0 /* EntryService.m in Sources */,
 				B8AA3F821FCB597500327328 /* AppDelegate.m in Sources */,
+				B87EF2B41FEDCF6F0064D622 /* AddEntryViewController.m in Sources */,
 				B86E754B1FE5EAB800716F64 /* PersistedUserID.m in Sources */,
+				B8A82F9B1FF0293D0054657A /* Type.m in Sources */,
 				B8AA3F7F1FCB597500327328 /* main.m in Sources */,
 				B89982F71FDE05C4006853D0 /* EntriesViewController.m in Sources */,
 				B89983171FDE61C1006853D0 /* Logging.m in Sources */,
@@ -820,7 +823,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WD8H86S6CT;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				HEADER_SEARCH_PATHS = "$SRCROOT";
+				HEADER_SEARCH_PATHS = $SRCROOT;
 				INFOPLIST_FILE = ToDoMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -843,7 +846,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WD8H86S6CT;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				HEADER_SEARCH_PATHS = "$SRCROOT";
+				HEADER_SEARCH_PATHS = $SRCROOT;
 				INFOPLIST_FILE = ToDoMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -866,7 +869,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WD8H86S6CT;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				HEADER_SEARCH_PATHS = "$SRCROOT";
+				HEADER_SEARCH_PATHS = $SRCROOT;
 				INFOPLIST_FILE = ToDoMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
@@ -996,7 +999,7 @@
 					"\"${PODS_ROOT}/Headers/Public/OriginateAutoLayout\"",
 					"\"${PODS_ROOT}/Headers/Public/OriginateHTTP\"",
 					"\"${PODS_ROOT}/Headers/Public/PaperTrailLumberjack\"",
-					"$SRCROOT",
+					$SRCROOT,
 				);
 				INFOPLIST_FILE = ToDo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1023,7 +1026,7 @@
 					"\"${PODS_ROOT}/Headers/Public/OriginateAutoLayout\"",
 					"\"${PODS_ROOT}/Headers/Public/OriginateHTTP\"",
 					"\"${PODS_ROOT}/Headers/Public/PaperTrailLumberjack\"",
-					"$SRCROOT",
+					$SRCROOT,
 				);
 				INFOPLIST_FILE = ToDo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1155,7 +1158,7 @@
 					"\"${PODS_ROOT}/Headers/Public/OriginateAutoLayout\"",
 					"\"${PODS_ROOT}/Headers/Public/OriginateHTTP\"",
 					"\"${PODS_ROOT}/Headers/Public/PaperTrailLumberjack\"",
-					"$SRCROOT",
+					$SRCROOT,
 				);
 				INFOPLIST_FILE = ToDo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

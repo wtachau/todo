@@ -6,8 +6,10 @@
 //  Copyright © 2017 Tachau. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface EntriesViewController : UIViewController
+
+- (void)showAddEntryController:(UIButton *)sender;
 
 @end

@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - CocoaAsyncSocket (7.6.2)
   - CocoaLumberjack (2.2.0):
     - CocoaLumberjack/Default (= 2.2.0)
@@ -12,34 +27,41 @@ PODS:
     - Mantle/extobjc (= 2.0.7)
   - Mantle/extobjc (2.0.7)
   - OriginateAutoLayout (0.0.3)
-  - OriginateHTTP (0.1.0)
   - PaperTrailLumberjack (2.0.0):
     - CocoaAsyncSocket
     - CocoaLumberjack (~> 2.2.0)
+  - PKFunctional (0.1.7)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.0)
   - Mantle (~> 2.0.6)
   - OriginateAutoLayout
-  - OriginateHTTP
   - PaperTrailLumberjack (from `https://github.com/greenbits/papertrail-lumberjack-ios.git`)
+  - PKFunctional (from `https://github.com/wtachau/PKFunctional.git`)
 
 EXTERNAL SOURCES:
   PaperTrailLumberjack:
     :git: https://github.com/greenbits/papertrail-lumberjack-ios.git
+  PKFunctional:
+    :git: https://github.com/wtachau/PKFunctional.git
 
 CHECKOUT OPTIONS:
   PaperTrailLumberjack:
     :commit: d019eccaeeb5a29a1a271f4d900924e8c202cb2b
     :git: https://github.com/greenbits/papertrail-lumberjack-ios.git
+  PKFunctional:
+    :commit: 334265dc756dc59b276604812c218447876117cc
+    :git: https://github.com/wtachau/PKFunctional.git
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
   Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
   OriginateAutoLayout: 02b99cee4d275e9a6ec5faef108c4542f75b18af
-  OriginateHTTP: c90c8b9d4113767352ee2f382cf5a7e6c79b5cde
   PaperTrailLumberjack: 3ff66ec8487bd2f68c894ba3040ae0c506a41a53
+  PKFunctional: 3f9f11341079913f1c2ae8cffd6b9976828700e7
 
-PODFILE CHECKSUM: aecc7fcc1da47f52b1ecde0f0e838262659a8701
+PODFILE CHECKSUM: adb081f4d4a7a33a7204acdebd57f7c146c45fee
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
