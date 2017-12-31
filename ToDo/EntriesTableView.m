@@ -52,6 +52,8 @@ int const HEADER_HEIGHT = 80;
         self.dataSource = self.entriesDataSource;
         self.delegate = self;
         [self setEditing:YES animated:YES];
+        self.allowsSelectionDuringEditing = YES;
+        self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         self.refreshControl = self.refreshControl;
         [self registerClass:[EntryTableViewCell class]
                   forCellReuseIdentifier:NSStringFromClass([EntryTableViewCell class])];
@@ -140,5 +142,49 @@ int const HEADER_HEIGHT = 80;
     return NO;
 }
 
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    // http://blog.sina.com.cn/s/blog_aec0de6701014uwq.html
+//    // https://www.transpire.com/insights/blog/reordering-ui-tableview-cell-touch-point
+//    for(UIView* view in cell.subviews)
+//    {
+//        if([[[view class] description] isEqualToString:@"UITableViewCellReorderControl"])
+//        {
+//            UIView *reorderControl = view;
+//            
+//            UIView* resizedGripView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetMaxX(reorderControl.frame), CGRectGetMaxY(reorderControl.frame))];
+//            [resizedGripView addSubview:reorderControl];
+//            [cell addSubview:resizedGripView];
+//            
+//            CGFloat resizedGripViewHeight = resizedGripView.frame.size.height;
+//            CGFloat resizedGripViewWidth = resizedGripView.frame.size.width;
+//            CGFloat reorderControlWidth = reorderControl.frame.size.width;
+//            CGFloat reorderControlHeight = reorderControl.frame.size.height;
+//            
+//            CGSize sizeDifference = CGSizeMake(resizedGripViewWidth - reorderControlWidth,
+//                                               resizedGripViewHeight - reorderControlHeight);
+//            CGSize transformRatio = CGSizeMake(resizedGripViewWidth / reorderControlWidth,
+//                                               resizedGripViewHeight / reorderControlHeight);
+//            
+//            //    Original transform
+//            CGAffineTransform transform = CGAffineTransformIdentity;
+//            
+//            //    Scale custom view so grip will fill entire cell
+//            transform = CGAffineTransformScale(transform, transformRatio.width, transformRatio.height);
+//            
+//            //    Move custom view so the grip's top left aligns with the cell's top left
+//            transform = CGAffineTransformTranslate(transform, -sizeDifference.width / 2.0, -sizeDifference.height / 2.0);
+//            
+//            [resizedGripView setTransform:transform];
+//            
+//            for(UIImageView* cellGrip in reorderControl.subviews)
+//            {
+////                if([cellGrip isKindOfClass:[UIImageView class]])
+////                    [cellGrip setImage:nil];
+//                    
+//            }
+//        }
+//    }
+//}
 
 @end

@@ -68,15 +68,23 @@ moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
         
         self.entryTypes[toIndexPath.section].entries = entries;
         
-        [EntryService saveOrder:entries withSuccess:^(NSArray<Entry *> *entries) {
-        
-        } failure:^(NSString *error) {
-            
-        }];
+        [EntryService saveOrder:entries withSuccess:nil failure:nil];
     } else {
-        // TODO: Across multiple sections
+        // Entry is moved across Types
+        NSMutableArray *fromEntries = [self.entryTypes[fromIndexPath.section].entries mutableCopy];
+        NSMutableArray *toEntries = [self.entryTypes[toIndexPath.section].entries mutableCopy];
+        
+        Entry *movedEntry = [fromEntries objectAtIndex:fromIndexPath.row];
+        movedEntry.type = self.entryTypes[toIndexPath.section].typeId;
+        [fromEntries removeObjectAtIndex:fromIndexPath.row];
+        [toEntries insertObject:movedEntry atIndex:toIndexPath.row];
+        
+        self.entryTypes[fromIndexPath.section].entries = fromEntries;
+        self.entryTypes[toIndexPath.section].entries = toEntries;
+        
+        [EntryService saveOrder:fromEntries withSuccess:nil failure:nil];
+        [EntryService saveOrder:toEntries withSuccess:nil failure:nil];
     }
-    return ;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -45,6 +45,12 @@ NSString * const SHORTCUT_ITEM_ADD_ENTRY = @"Add Entry";
                                                                                       userInfo: nil];
     
     [UIApplication sharedApplication].shortcutItems = @[addEntryItem];
+    CGFloat statusBarHeight = 20;
+    self.window.clipsToBounds = YES;
+    self.window.frame = CGRectMake(0,
+                                   statusBarHeight,
+                                   self.window.frame.size.width,
+                                   self.window.frame.size.height - statusBarHeight);
 
     UIApplicationShortcutItem *shortcutItem = [launchOptions objectForKey:UIApplicationLaunchOptionsShortcutItemKey];
     if(shortcutItem){

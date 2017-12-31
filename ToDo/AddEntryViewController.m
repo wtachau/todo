@@ -71,6 +71,12 @@
     [self setupConstraints];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.entryTextField becomeFirstResponder];
+}
+
 - (void)setupViews
 {
     [self.view addAutoLayoutSubviews:@[

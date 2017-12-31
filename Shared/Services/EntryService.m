@@ -55,7 +55,11 @@
                        data:@{ @"entries": [MTLJSONAdapter JSONArrayFromModels:entries error:nil] }
        expectedResponseType:Entry.class
                    response:^(id response, NSString *error) {
-           response ? success(response) : failure(error);
+                       if (response) {
+                           success ? success(response) : nil;
+                       } else {
+                           failure ? failure(error) : nil;
+                       }
     }];
 }
 

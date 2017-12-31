@@ -69,10 +69,10 @@
 
 - (void)setupConstraints
 {
-    [self.entriesTableView centerHorizontally];
-    [self.entriesTableView matchHeightWithView:self.view];
-    [self.entriesTableView pinToBottom];
+    [self.entriesTableView pinToVerticalEdges];
+    [self.entriesTableView pinToHorizontalEdges];
     [self.entriesTableView fillWidth];
+    [self.entriesTableView fillHeight];
 }
 
 
@@ -120,6 +120,10 @@
     [alert addAction:ok];
     [self presentViewController:alert animated:YES completion:nil];
 
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 
