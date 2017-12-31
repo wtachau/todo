@@ -7,16 +7,18 @@
 //
 
 @import Foundation;
-#import "Authorization.h"
 
 @interface NetworkingClient : NSObject
 
 typedef void (^HTTPClientResponse)(id response, NSString *error);
 typedef void (^HTTPErrorResponse)(NSString *error);
 
-@property (nonatomic, copy, readwrite) Authorization *authorization;
-
 + (void)GET:(NSString *)URI
+expectedResponseType:(Class)expectedClass
+   response:(HTTPClientResponse)responseBlock;
+
++ (void)PUT:(NSString *)URI
+       data:(NSDictionary *)body
 expectedResponseType:(Class)expectedClass
    response:(HTTPClientResponse)responseBlock;
 
@@ -24,6 +26,11 @@ expectedResponseType:(Class)expectedClass
         data:(NSDictionary *)body
 expectedResponseType:(Class)expectedClass
     response:(HTTPClientResponse)responseBlock;
+
++ (void)PATCH:(NSString *)URI
+         data:(NSDictionary *)body
+expectedResponseType:(Class)expectedClass
+     response:(HTTPClientResponse)responseBlock;
 
 + (void)DELETE:(NSString *)URI
 expectedResponseType:(Class)expectedClass

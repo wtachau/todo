@@ -11,6 +11,7 @@
 #import "Type.h"
 #import "Entry.h"
 #import "EntryService.h"
+#import "SVProgressHUD.h"
 
 @interface AddEntryViewController ()
 
@@ -127,12 +128,14 @@
 - (void)addEntry
 {
     NSString *entryText = self.entryTextField.text;
+    [SVProgressHUD showWithStatus:[NSString stringWithFormat:@"Adding \"%@\"", entryText]];
     [EntryService submitNewEntry:entryText
                             type:self.selectedType.typeId
                      withSuccess:^(Entry * entry) {
-                         NSLog(@"added @%@", [entry description]);
+                         [SVProgressHUD dismiss];
                          [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
                          [self.addEntryDelegate entryAdded];
+                         self.entryTextField.text = @"";
                      } failure:^(NSString *error) {
                          
                      }];

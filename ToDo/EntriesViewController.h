@@ -7,9 +7,11 @@
 //
 
 @import UIKit;
+@class Entry;
 
 @interface EntriesViewController : UIViewController
 
-- (void)showAddEntryController:(UIButton *)sender;
+//- (void)showAddEntryController:(UIButton *)sender;
+//- (void)showCompleteEntryActionSheet:(Entry *)entry;
 
 @end

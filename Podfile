@@ -13,6 +13,7 @@ target 'ToDo' do
     platform :ios, '11.0'
     pod 'OriginateAutoLayout'
     pod 'PaperTrailLumberjack', :git => 'https://github.com/greenbits/papertrail-lumberjack-ios.git'
+    pod 'SVProgressHUD'
     shared_pods
 end
 

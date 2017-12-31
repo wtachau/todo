@@ -10,9 +10,7 @@
 #import "AFNetworking.h"
 #import "Logging.h"
 #import "Mantle.h"
-#import "Authorization.h"
 #import "PersistedUserID.h"
-//#import "AFHTTPSessionManager."
 
 @interface NetworkingClient()
 
@@ -135,24 +133,40 @@
 
 }
 
++ (void)PUT:(NSString *)URI
+       data:(NSDictionary *)body
+expectedResponseType:(Class)expectedClass
+   response:(HTTPClientResponse)responseBlock
+{
+    NSNumber *RID = @([URI hash] % 1001);
+    NSString *logString = [NSString stringWithFormat:@"POST: %@ - Data: %@.", URI, body];
+    log_prefix([self prefixString:RID], logString);
+    
+    [self.manager PUT:[self urlWithBasePath:URI] parameters:body success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self processResponse:responseObject
+                        error:nil
+          expectedReponseType:expectedClass
+                responseBlock:responseBlock];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
+
 + (void)POST:(NSString *)URI
         data:(NSDictionary *)body
 expectedResponseType:(Class)expectedClass
     response:(HTTPClientResponse)responseBlock
 {
     NSNumber *RID = @([URI hash] % 1001);
-    NSError *error;
-    NSData *data = [NSJSONSerialization dataWithJSONObject: body
-                                                   options: 0
-                                                     error: &error];
     NSString *logString = [NSString stringWithFormat:@"POST: %@ - Data: %@.", URI, body];
     log_prefix([self prefixString:RID], logString);
     
     [self.manager POST:[self urlWithBasePath:URI]
             parameters:body
               progress:nil
-               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                   [self processResponse:responseObject
+               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable response) {
+                   NSLog(@"JSON: %@", response);
+                   [self processResponse:response
                                    error:nil
                      expectedReponseType:expectedClass
                            responseBlock:responseBlock];
@@ -170,6 +184,29 @@ expectedResponseType:(Class)expectedClass
 //    }];
 }
 
++ (void)PATCH:(NSString *)URI
+         data:(NSDictionary *)body
+expectedResponseType:(Class)expectedClass
+     response:(HTTPClientResponse)responseBlock
+{
+    NSNumber *RID = @([URI hash] % 1001);
+    NSString *logString = [NSString stringWithFormat:@"PATCH: %@ - Data: %@.", URI, body];
+    log_prefix([self prefixString:RID], logString);
+    
+    [self.manager PATCH:[self urlWithBasePath:URI]
+             parameters:body
+                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable response) {
+        NSLog(@"JSON: %@", response);
+        [self processResponse:response
+                        error:nil
+          expectedReponseType:expectedClass
+                responseBlock:responseBlock];
+    }
+                failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
+
 + (void)DELETE:(NSString *)URI expectedResponseType:(Class)expectedClass response:(HTTPClientResponse)responseBlock
 {
     NSNumber *RID = @([URI hash] % 1001);
@@ -184,6 +221,8 @@ expectedResponseType:(Class)expectedClass
 //        [self processResponse:response error:error expectedReponseType:expectedClass responseBlock:responseBlock];
 //    }];
 }
+
+
 
 #pragma mark - Miscellaneous
 

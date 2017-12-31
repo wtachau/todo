@@ -21,4 +21,12 @@
            withSuccess:(void (^)(Entry *))success
                failure:(HTTPErrorResponse)failure;
 
++ (void)completeEntry:(Entry *) entry
+          withSuccess:(void (^)(Entry *))success
+              failure:(HTTPErrorResponse)failure;
+
++ (void)saveOrder:(NSArray<Entry *> *)entries
+      withSuccess:(void (^)(NSArray<Entry *> *))success
+          failure:(HTTPErrorResponse)failure;
+
 @end

@@ -7,24 +7,27 @@
 //
 
 #import "EntriesViewController.h"
+
 #import "EntriesDataSource.h"
 #import "Formatting.h"
 #import "AddEntryViewController.h"
 #import "Type.h"
+#import "Entry.h"
 #import "PKFunctional.h"
 #import "AddEntryDelegate.h"
+#import "EntryTableViewCell.h"
+#import "EntryService.h"
+#import "SVProgressHUD.h"
+#import "EntriesTableView.h"
+#import "EntriesViewControllerDelegate.h"
 
-@interface EntriesViewController () <DataSourceDelegate, UITableViewDelegate, AddEntryDelegate>
+@interface EntriesViewController () <AddEntryDelegate, EntriesViewControllerDelegate>
 
-@property (nonatomic, strong, readwrite) UITableView *entriesTableView;
-@property (nonatomic, strong, readwrite) EntriesDataSource *dataSource;
-@property (nonatomic, strong, readwrite) UIButton *addEntryButton;
+@property (nonatomic, strong, readwrite) EntriesTableView *entriesTableView;
 
 @property (nonatomic, strong, readwrite) AddEntryViewController *addEntryViewController;
 
 @end
-
-int const HEADER_HEIGHT = 80;
 
 @implementation EntriesViewController
 
@@ -33,31 +36,10 @@ int const HEADER_HEIGHT = 80;
 - (UITableView *)entriesTableView
 {
     if (!_entriesTableView) {
-        _entriesTableView = [[UITableView alloc] init];
-        _entriesTableView.delegate = self;
-        _entriesTableView.dataSource = self.dataSource;
-        [_entriesTableView registerClass:[UITableViewCell class]
-                forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+        _entriesTableView = [[EntriesTableView alloc] init];
+        _entriesTableView.entriesViewControllerDelegate = self;
     }
     return _entriesTableView;
-}
-
-- (EntriesDataSource *)dataSource {
-    if (!_dataSource) {
-        _dataSource = [[EntriesDataSource alloc] init];
-        _dataSource.dataSourceDelegate = self;
-    }
-    return _dataSource;
-}
-
-- (UIButton *)addEntryButton {
-    if (!_addEntryButton) {
-        _addEntryButton = [[UIButton alloc] init];
-        [_addEntryButton addTarget:self
-                            action:@selector(showAddEntryController)
-                  forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _addEntryButton;
 }
 
 - (AddEntryViewController *)addEntryViewController
@@ -82,10 +64,7 @@ int const HEADER_HEIGHT = 80;
 {
     [self.view addAutoLayoutSubviews:@[
                                        self.entriesTableView,
-                                       self.addEntryButton
                                        ]];
-    
-    self.addEntryButton.backgroundColor = [UIColor blueColor];
 }
 
 - (void)setupConstraints
@@ -94,89 +73,53 @@ int const HEADER_HEIGHT = 80;
     [self.entriesTableView matchHeightWithView:self.view];
     [self.entriesTableView pinToBottom];
     [self.entriesTableView fillWidth];
-    
-    [self.addEntryButton centerHorizontally];
-    [self.addEntryButton pinToBottomWithPadding:20];
-    [self.addEntryButton fixSize:CGSizeMake(50, 50)];
 }
 
-#pragma mark - <TableViewDataSourceDelegate>
-
-- (void)dataDidLoad
-{
-    [self.entriesTableView reloadData];
-    NSLog(@"reloading");
-}
-
-
-#pragma mark - <UITableViewDelegate>
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 100;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    CGRect frame = tableView.frame;
-    
-    CGFloat addButtonWidth = 50;
-    CGFloat headerPadding = 10;
-    CGRect addButtonRect = CGRectMake(frame.size.width - addButtonWidth - headerPadding,
-                                      headerPadding,
-                                      addButtonWidth,
-                                      HEADER_HEIGHT - 2 * headerPadding
-                                      );
-    
-    UIButton *addButton = [[UIButton alloc] initWithFrame:addButtonRect];
-    [addButton setTitle:@"+" forState:UIControlStateNormal];
-    addButton.backgroundColor = [UIColor redColor];
-    
-    Type *type = self.dataSource.entryTypes[section];
-    addButton.tag = [type.typeId intValue];
-    [addButton addTarget:self action:@selector(showAddEntryController:) forControlEvents:UIControlEventTouchUpInside];
-    
-    CGRect headerLabelRect= CGRectMake(
-                                       headerPadding,
-                                       headerPadding,
-                                       frame.size.width - 3 * headerPadding - addButtonWidth,
-                                       HEADER_HEIGHT - (2 * headerPadding)
-                                       );
-    UILabel *title = [[UILabel alloc] initWithFrame:headerLabelRect];
-    title.text = type.text;
-    
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-    [headerView addSubview:title];
-    [headerView addSubview:addButton];
-    headerView.backgroundColor = [UIColor yellowColor];
-    
-    return headerView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return HEADER_HEIGHT;
-}
 
 #pragma mark - AddEntryDelegate
 
 - (void)entryAdded
 {
-    [self.dataSource fetchData];
+    [self.entriesTableView.entriesDataSource fetchData];
 }
 
 # pragma mark - Miscellaneous
 
 - (void)showAddEntryController:(UIButton *)sender
 {
-    Type *type = [self.dataSource.entryTypes pk_find:^BOOL(Type *type) {
+    Type *type = [self.entriesTableView.entriesDataSource.entryTypes pk_find:^BOOL(Type *type) {
         return [type.typeId integerValue] == sender.tag;
     }];
     self.addEntryViewController.selectedType = type;
     [self presentViewController:self.addEntryViewController animated:YES completion:nil];
+}
+
+- (void)showCompleteEntryActionSheet:(Entry *)entry
+{
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:nil
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Complete"
+                                                 style:UIAlertActionStyleDefault
+                                               handler:^(UIAlertAction * _Nonnull action)
+                         {
+                             [SVProgressHUD showWithStatus:[NSString stringWithFormat:@"Completing \"%@\"", entry.text]];
+                             [EntryService completeEntry:entry withSuccess:^(Entry *entry) {
+                                 [SVProgressHUD dismiss];
+                                 [self.entriesTableView.entriesDataSource fetchData];
+                             } failure:^(NSString *error) {
+                                 
+                             }];
+                         }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel"
+                                                     style:UIAlertActionStyleCancel
+                                                   handler:nil];
+    [alert addAction:cancel];
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
+
 }
 
 

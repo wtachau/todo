@@ -41,6 +41,8 @@
 		B89983171FDE61C1006853D0 /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = B89983151FDE61C1006853D0 /* Logging.m */; };
 		B8A82F9B1FF0293D0054657A /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A82F9A1FF0293D0054657A /* Type.m */; };
 		B8A82F9C1FF0444D0054657A /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = B87EF2981FEC228F0064D622 /* Entry.m */; };
+		B8A82FA11FF1714C0054657A /* EntryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A82FA01FF1714C0054657A /* EntryTableViewCell.m */; };
+		B8A82FA41FF6F2540054657A /* EntriesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A82FA31FF6F2540054657A /* EntriesTableView.m */; };
 		B8AA3F7F1FCB597500327328 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AA3F7E1FCB597500327328 /* main.m */; };
 		B8AA3F821FCB597500327328 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AA3F811FCB597500327328 /* AppDelegate.m */; };
 		B8AA3F851FCB597500327328 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AA3F841FCB597500327328 /* ViewController.m */; };
@@ -141,6 +143,11 @@
 		B8A82F991FF0293D0054657A /* Type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
 		B8A82F9A1FF0293D0054657A /* Type.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
 		B8A82F9D1FF0922A0054657A /* AddEntryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddEntryDelegate.h; sourceTree = "<group>"; };
+		B8A82F9F1FF1714C0054657A /* EntryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryTableViewCell.h; sourceTree = "<group>"; };
+		B8A82FA01FF1714C0054657A /* EntryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryTableViewCell.m; sourceTree = "<group>"; };
+		B8A82FA21FF6F2540054657A /* EntriesTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesTableView.h; sourceTree = "<group>"; };
+		B8A82FA31FF6F2540054657A /* EntriesTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesTableView.m; sourceTree = "<group>"; };
+		B8A82FA51FF6F57C0054657A /* EntriesViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesViewControllerDelegate.h; sourceTree = "<group>"; };
 		B8AA3F7A1FCB597500327328 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AA3F7E1FCB597500327328 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8AA3F801FCB597500327328 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -273,6 +280,7 @@
 			children = (
 				B89983011FDE103C006853D0 /* DataSourceDelegate.h */,
 				B8A82F9D1FF0922A0054657A /* AddEntryDelegate.h */,
+				B8A82FA51FF6F57C0054657A /* EntriesViewControllerDelegate.h */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -329,6 +337,17 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
+		B8A82F9E1FF171200054657A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8A82F9F1FF1714C0054657A /* EntryTableViewCell.h */,
+				B8A82FA01FF1714C0054657A /* EntryTableViewCell.m */,
+				B8A82FA21FF6F2540054657A /* EntriesTableView.h */,
+				B8A82FA31FF6F2540054657A /* EntriesTableView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		B8AA3F711FCB597500327328 = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +381,7 @@
 				B87EF2AC1FEC2D100064D622 /* Helpers */,
 				B86E75A01FEBDE6700716F64 /* ViewControllers */,
 				B86E75A11FEBDE7300716F64 /* DataSources */,
+				B8A82F9E1FF171200054657A /* Views */,
 				B86E75A71FEBDEA600716F64 /* Delegates */,
 				B8AA3F7D1FCB597500327328 /* Supporting Files */,
 			);
@@ -605,9 +625,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ToDo/Pods-ToDo-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -729,8 +752,10 @@
 				B87EF29E1FEC2B500064D622 /* EntryService.h in Sources */,
 				B89983081FDE5969006853D0 /* NetworkingClient.m in Sources */,
 				B89983001FDE0F26006853D0 /* ModelDateHelper.m in Sources */,
+				B8A82FA11FF1714C0054657A /* EntryTableViewCell.m in Sources */,
 				B8AA3F851FCB597500327328 /* ViewController.m in Sources */,
 				B899830E1FDE5BF8006853D0 /* ServerConfiguration.m in Sources */,
+				B8A82FA41FF6F2540054657A /* EntriesTableView.m in Sources */,
 				B89982FA1FDE0A6D006853D0 /* EntriesDataSource.m in Sources */,
 				B89983051FDE578C006853D0 /* EntryService.m in Sources */,
 				B8AA3F821FCB597500327328 /* AppDelegate.m in Sources */,

@@ -19,27 +19,38 @@
              NSStringFromSelector(@selector(entryId)): @"id",
              NSStringFromSelector(@selector(text)): @"text",
              NSStringFromSelector(@selector(type)): @"type",
+             NSStringFromSelector(@selector(order)): @"order",
              NSStringFromSelector(@selector(userId)): @"user_id",
              NSStringFromSelector(@selector(entryGeneratorId)): @"entry_generator_id",
              NSStringFromSelector(@selector(showBeforeActive)): @"show_before_active",
              NSStringFromSelector(@selector(activeAfter)): @"active_after",
              NSStringFromSelector(@selector(createdAt)): @"created_at",
              NSStringFromSelector(@selector(updatedAt)): @"updated_at",
+             NSStringFromSelector(@selector(completedOn)): @"completed_on",
+             NSStringFromSelector(@selector(deletedOn)): @"deleted_on"
              };
 }
 
 #pragma mark - MTLModel
 
 + (NSValueTransformer *)createdAtJSONTransformer {
-    return [ModelDateHelper dateTransformer];
+    return [ModelDateHelper dateTimeTransformer];
 }
 
 + (NSValueTransformer *)updatedAtJSONTransformer {
-    return [ModelDateHelper dateTransformer];
+    return [ModelDateHelper dateTimeTransformer];
 }
 
 + (NSValueTransformer *)activeAfterJSONTransformer {
-    return [ModelDateHelper dateTransformer];
+    return [ModelDateHelper dateTimeTransformer];
+}
+
++ (NSValueTransformer *)completedOnJSONTransformer {
+    return [ModelDateHelper dateTimeTransformer];
+}
+
++ (NSValueTransformer *)deletedOnJSONTransformer {
+    return [ModelDateHelper dateTimeTransformer];
 }
 
 @end
