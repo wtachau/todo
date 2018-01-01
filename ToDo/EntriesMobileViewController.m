@@ -1,14 +1,13 @@
 //
-//  EntriesViewController.m
+//  EntriesMobileViewController.m
 //  ToDo
 //
 //  Created by William Tachau on 12/10/17.
 //  Copyright © 2017 Tachau. All rights reserved.
 //
 
-#import "EntriesViewController.h"
+#import "EntriesMobileViewController.h"
 
-#import "EntriesDataSource.h"
 #import "Formatting.h"
 #import "AddEntryViewController.h"
 #import "Type.h"
@@ -21,7 +20,7 @@
 #import "EntriesTableView.h"
 #import "EntriesViewControllerDelegate.h"
 
-@interface EntriesViewController () <AddEntryDelegate, EntriesViewControllerDelegate>
+@interface EntriesMobileViewController () <AddEntryDelegate, EntriesViewControllerDelegate>
 
 @property (nonatomic, strong, readwrite) EntriesTableView *entriesTableView;
 
@@ -29,7 +28,7 @@
 
 @end
 
-@implementation EntriesViewController
+@implementation EntriesMobileViewController
 
 #pragma mark - Properties
 

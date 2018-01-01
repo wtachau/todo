@@ -8,7 +8,7 @@
 
 #import "EntriesTableView.h"
 #import "EntryTableViewCell.h"
-#import "EntriesViewController.h"
+#import "EntriesMobileViewController.h"
 #import "SVProgressHUD.h"
 #import "Entry.h"
 #import "Type.h"
@@ -24,9 +24,9 @@ int const HEADER_HEIGHT = 80;
 
 @implementation EntriesTableView
 
-- (EntriesDataSource *)entriesDataSource {
+- (EntriesMobileDataSource *)entriesDataSource {
     if (!_entriesDataSource) {
-        _entriesDataSource = [[EntriesDataSource alloc] init];
+        _entriesDataSource = [[EntriesMobileDataSource alloc] init];
         _entriesDataSource.dataSourceDelegate = self;
     }
     return _entriesDataSource;

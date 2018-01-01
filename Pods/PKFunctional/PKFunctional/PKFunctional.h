@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 nsexpcetional.com. All rights reserved.
 //
 
-@import UIKit;
+@import Foundation;
 
 //! Project version number for PKFunctional.
 FOUNDATION_EXPORT double PKFunctionalVersionNumber;

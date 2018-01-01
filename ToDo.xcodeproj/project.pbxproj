@@ -31,7 +31,11 @@
 		B87EF2B01FEC2D1E0064D622 /* ModelDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982FF1FDE0F26006853D0 /* ModelDateHelper.m */; };
 		B87EF2B11FED7C000064D622 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = B899830F1FDE5F60006853D0 /* Configuration.plist */; };
 		B87EF2B41FEDCF6F0064D622 /* AddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87EF2B31FEDCF6F0064D622 /* AddEntryViewController.m */; };
-		B89982F71FDE05C4006853D0 /* EntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982F61FDE05C3006853D0 /* EntriesViewController.m */; };
+		B89781D21FFADAD700E18C0C /* ToDoMacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C4E3701FF9BF3900BAA5E5 /* ToDoMacViewController.m */; };
+		B89781D31FFADC0B00E18C0C /* EntriesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982F91FDE0A6D006853D0 /* EntriesDataSource.m */; };
+		B89781D61FFAE17500E18C0C /* ModelHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B89781D51FFAE17500E18C0C /* ModelHelpers.m */; };
+		B89781D71FFAE17D00E18C0C /* ModelHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B89781D51FFAE17500E18C0C /* ModelHelpers.m */; };
+		B89982F71FDE05C4006853D0 /* EntriesMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982F61FDE05C3006853D0 /* EntriesMobileViewController.m */; };
 		B89982FA1FDE0A6D006853D0 /* EntriesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982F91FDE0A6D006853D0 /* EntriesDataSource.m */; };
 		B89983001FDE0F26006853D0 /* ModelDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B89982FF1FDE0F26006853D0 /* ModelDateHelper.m */; };
 		B89983051FDE578C006853D0 /* EntryService.m in Sources */ = {isa = PBXBuildFile; fileRef = B89983041FDE578C006853D0 /* EntryService.m */; };
@@ -39,10 +43,13 @@
 		B899830E1FDE5BF8006853D0 /* ServerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B899830D1FDE5BF8006853D0 /* ServerConfiguration.m */; };
 		B89983101FDE5F60006853D0 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = B899830F1FDE5F60006853D0 /* Configuration.plist */; };
 		B89983171FDE61C1006853D0 /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = B89983151FDE61C1006853D0 /* Logging.m */; };
+		B8A146B41FFADA95007A28E4 /* EntriesMacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B88DCAA81FF9A6AF00D7DF6E /* EntriesMacViewController.m */; };
 		B8A82F9B1FF0293D0054657A /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A82F9A1FF0293D0054657A /* Type.m */; };
 		B8A82F9C1FF0444D0054657A /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = B87EF2981FEC228F0064D622 /* Entry.m */; };
 		B8A82FA11FF1714C0054657A /* EntryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A82FA01FF1714C0054657A /* EntryTableViewCell.m */; };
 		B8A82FA41FF6F2540054657A /* EntriesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A82FA31FF6F2540054657A /* EntriesTableView.m */; };
+		B8A82FA61FF972E00054657A /* Type.h in Sources */ = {isa = PBXBuildFile; fileRef = B8A82F991FF0293D0054657A /* Type.h */; };
+		B8A82FA71FF972E00054657A /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A82F9A1FF0293D0054657A /* Type.m */; };
 		B8AA3F7F1FCB597500327328 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AA3F7E1FCB597500327328 /* main.m */; };
 		B8AA3F821FCB597500327328 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AA3F811FCB597500327328 /* AppDelegate.m */; };
 		B8AA3F851FCB597500327328 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AA3F841FCB597500327328 /* ViewController.m */; };
@@ -55,6 +62,9 @@
 		B8AA3FAD1FCB6F6800327328 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AA3FAB1FCB6F6800327328 /* MainInterface.storyboard */; };
 		B8AA3FB11FCB6F6800327328 /* TodoIntentsUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B8AA3FA31FCB6F6800327328 /* TodoIntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B8AA3FB41FCB6F6800327328 /* TodoIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B8AA3F991FCB6F6800327328 /* TodoIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B8C4E3741FF9C83500BAA5E5 /* EntriesMacDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C4E3731FF9C83500BAA5E5 /* EntriesMacDataSource.m */; };
+		B8C4E3771FF9C85E00BAA5E5 /* EntriesScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C4E3761FF9C85E00BAA5E5 /* EntriesScrollView.m */; };
+		B8C4E37A1FFAD61300BAA5E5 /* EntriesMobileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C4E3791FFAD61200BAA5E5 /* EntriesMobileDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,8 +133,12 @@
 		B87EF2B21FEDCF6F0064D622 /* AddEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddEntryViewController.h; sourceTree = "<group>"; };
 		B87EF2B31FEDCF6F0064D622 /* AddEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddEntryViewController.m; sourceTree = "<group>"; };
 		B885AA0DB1B66D8ACB197E65 /* Pods-ToDoMac.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoMac.development.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoMac/Pods-ToDoMac.development.xcconfig"; sourceTree = "<group>"; };
-		B89982F51FDE05C3006853D0 /* EntriesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesViewController.h; sourceTree = "<group>"; };
-		B89982F61FDE05C3006853D0 /* EntriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesViewController.m; sourceTree = "<group>"; };
+		B88DCAA71FF9A6AF00D7DF6E /* EntriesMacViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntriesMacViewController.h; sourceTree = "<group>"; };
+		B88DCAA81FF9A6AF00D7DF6E /* EntriesMacViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntriesMacViewController.m; sourceTree = "<group>"; };
+		B89781D41FFAE17500E18C0C /* ModelHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelHelpers.h; sourceTree = "<group>"; };
+		B89781D51FFAE17500E18C0C /* ModelHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelHelpers.m; sourceTree = "<group>"; };
+		B89982F51FDE05C3006853D0 /* EntriesMobileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesMobileViewController.h; sourceTree = "<group>"; };
+		B89982F61FDE05C3006853D0 /* EntriesMobileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesMobileViewController.m; sourceTree = "<group>"; };
 		B89982F81FDE0A6D006853D0 /* EntriesDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesDataSource.h; sourceTree = "<group>"; };
 		B89982F91FDE0A6D006853D0 /* EntriesDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesDataSource.m; sourceTree = "<group>"; };
 		B89982FE1FDE0F26006853D0 /* ModelDateHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelDateHelper.h; sourceTree = "<group>"; };
@@ -148,6 +162,7 @@
 		B8A82FA21FF6F2540054657A /* EntriesTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesTableView.h; sourceTree = "<group>"; };
 		B8A82FA31FF6F2540054657A /* EntriesTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesTableView.m; sourceTree = "<group>"; };
 		B8A82FA51FF6F57C0054657A /* EntriesViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesViewControllerDelegate.h; sourceTree = "<group>"; };
+		B8A82FA91FF9750E0054657A /* EntriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesViewController.m; sourceTree = "<group>"; };
 		B8AA3F7A1FCB597500327328 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AA3F7E1FCB597500327328 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8AA3F801FCB597500327328 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -169,6 +184,14 @@
 		B8AA3FA91FCB6F6800327328 /* IntentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentViewController.m; sourceTree = "<group>"; };
 		B8AA3FAC1FCB6F6800327328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B8AA3FAE1FCB6F6800327328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8C4E36F1FF9BF3900BAA5E5 /* ToDoMacViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoMacViewController.h; sourceTree = "<group>"; };
+		B8C4E3701FF9BF3900BAA5E5 /* ToDoMacViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoMacViewController.m; sourceTree = "<group>"; };
+		B8C4E3721FF9C83500BAA5E5 /* EntriesMacDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesMacDataSource.h; sourceTree = "<group>"; };
+		B8C4E3731FF9C83500BAA5E5 /* EntriesMacDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesMacDataSource.m; sourceTree = "<group>"; };
+		B8C4E3751FF9C85E00BAA5E5 /* EntriesScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesScrollView.h; sourceTree = "<group>"; };
+		B8C4E3761FF9C85E00BAA5E5 /* EntriesScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesScrollView.m; sourceTree = "<group>"; };
+		B8C4E3781FFAD61200BAA5E5 /* EntriesMobileDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntriesMobileDataSource.h; sourceTree = "<group>"; };
+		B8C4E3791FFAD61200BAA5E5 /* EntriesMobileDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesMobileDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,11 +247,16 @@
 			children = (
 				B86E75521FEBD39B00716F64 /* AppDelegate.h */,
 				B86E75531FEBD39B00716F64 /* AppDelegate.m */,
+				B8C4E37B1FFAD7BE00BAA5E5 /* ViewControllers */,
+				B8C4E37C1FFAD7C500BAA5E5 /* Views */,
+				B8C4E37D1FFAD7CD00BAA5E5 /* DataSources */,
 				B86E75551FEBD39B00716F64 /* Assets.xcassets */,
 				B86E75571FEBD39B00716F64 /* MainMenu.xib */,
 				B86E755A1FEBD39B00716F64 /* Info.plist */,
 				B86E755B1FEBD39B00716F64 /* main.m */,
 				B86E755D1FEBD39B00716F64 /* ToDoMac.entitlements */,
+				B8C4E36F1FF9BF3900BAA5E5 /* ToDoMacViewController.h */,
+				B8C4E3701FF9BF3900BAA5E5 /* ToDoMacViewController.m */,
 			);
 			path = ToDoMac;
 			sourceTree = "<group>";
@@ -238,8 +266,8 @@
 			children = (
 				B8AA3F831FCB597500327328 /* ViewController.h */,
 				B8AA3F841FCB597500327328 /* ViewController.m */,
-				B89982F51FDE05C3006853D0 /* EntriesViewController.h */,
-				B89982F61FDE05C3006853D0 /* EntriesViewController.m */,
+				B89982F51FDE05C3006853D0 /* EntriesMobileViewController.h */,
+				B89982F61FDE05C3006853D0 /* EntriesMobileViewController.m */,
 				B87EF2B21FEDCF6F0064D622 /* AddEntryViewController.h */,
 				B87EF2B31FEDCF6F0064D622 /* AddEntryViewController.m */,
 			);
@@ -249,6 +277,8 @@
 		B86E75A11FEBDE7300716F64 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				B8C4E3781FFAD61200BAA5E5 /* EntriesMobileDataSource.h */,
+				B8C4E3791FFAD61200BAA5E5 /* EntriesMobileDataSource.m */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -314,6 +344,8 @@
 				B899830F1FDE5F60006853D0 /* Configuration.plist */,
 				B89982FE1FDE0F26006853D0 /* ModelDateHelper.h */,
 				B89982FF1FDE0F26006853D0 /* ModelDateHelper.m */,
+				B89781D41FFAE17500E18C0C /* ModelHelpers.h */,
+				B89781D51FFAE17500E18C0C /* ModelHelpers.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -326,6 +358,14 @@
 				B89983021FDE55E1006853D0 /* Formatting.h */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		B88DCAA61FF99C4200D7DF6E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B8A82FA91FF9750E0054657A /* EntriesViewController.m */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		B8A82F941FF014620054657A /* DataSources */ = {
@@ -359,6 +399,7 @@
 				B8AA3FA41FCB6F6800327328 /* Frameworks */,
 				B8AA3F7B1FCB597500327328 /* Products */,
 				A188A651E75C6DE5F674D407 /* Pods */,
+				B88DCAA61FF99C4200D7DF6E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -431,6 +472,33 @@
 				B8AA3FAE1FCB6F6800327328 /* Info.plist */,
 			);
 			path = TodoIntentsUI;
+			sourceTree = "<group>";
+		};
+		B8C4E37B1FFAD7BE00BAA5E5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B88DCAA71FF9A6AF00D7DF6E /* EntriesMacViewController.h */,
+				B88DCAA81FF9A6AF00D7DF6E /* EntriesMacViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B8C4E37C1FFAD7C500BAA5E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8C4E3751FF9C85E00BAA5E5 /* EntriesScrollView.h */,
+				B8C4E3761FF9C85E00BAA5E5 /* EntriesScrollView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B8C4E37D1FFAD7CD00BAA5E5 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				B8C4E3721FF9C83500BAA5E5 /* EntriesMacDataSource.h */,
+				B8C4E3731FF9C83500BAA5E5 /* EntriesMacDataSource.m */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -725,8 +793,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89781D31FFADC0B00E18C0C /* EntriesDataSource.m in Sources */,
+				B89781D21FFADAD700E18C0C /* ToDoMacViewController.m in Sources */,
+				B8A146B41FFADA95007A28E4 /* EntriesMacViewController.m in Sources */,
+				B8A82FA61FF972E00054657A /* Type.h in Sources */,
+				B8A82FA71FF972E00054657A /* Type.m in Sources */,
+				B89781D71FFAE17D00E18C0C /* ModelHelpers.m in Sources */,
 				B87EF2AD1FEC2D1E0064D622 /* Logging.h in Sources */,
 				B87EF2AE1FEC2D1E0064D622 /* Logging.m in Sources */,
+				B8C4E3771FF9C85E00BAA5E5 /* EntriesScrollView.m in Sources */,
+				B8C4E3741FF9C83500BAA5E5 /* EntriesMacDataSource.m in Sources */,
 				B87EF2AF1FEC2D1E0064D622 /* ModelDateHelper.h in Sources */,
 				B87EF2B01FEC2D1E0064D622 /* ModelDateHelper.m in Sources */,
 				B87EF29F1FEC2B750064D622 /* EntryService.h in Sources */,
@@ -756,14 +832,16 @@
 				B8AA3F851FCB597500327328 /* ViewController.m in Sources */,
 				B899830E1FDE5BF8006853D0 /* ServerConfiguration.m in Sources */,
 				B8A82FA41FF6F2540054657A /* EntriesTableView.m in Sources */,
+				B89781D61FFAE17500E18C0C /* ModelHelpers.m in Sources */,
 				B89982FA1FDE0A6D006853D0 /* EntriesDataSource.m in Sources */,
 				B89983051FDE578C006853D0 /* EntryService.m in Sources */,
 				B8AA3F821FCB597500327328 /* AppDelegate.m in Sources */,
 				B87EF2B41FEDCF6F0064D622 /* AddEntryViewController.m in Sources */,
 				B86E754B1FE5EAB800716F64 /* PersistedUserID.m in Sources */,
+				B8C4E37A1FFAD61300BAA5E5 /* EntriesMobileDataSource.m in Sources */,
 				B8A82F9B1FF0293D0054657A /* Type.m in Sources */,
 				B8AA3F7F1FCB597500327328 /* main.m in Sources */,
-				B89982F71FDE05C4006853D0 /* EntriesViewController.m in Sources */,
+				B89982F71FDE05C4006853D0 /* EntriesMobileViewController.m in Sources */,
 				B89983171FDE61C1006853D0 /* Logging.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

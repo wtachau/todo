@@ -8,13 +8,13 @@
 
 #import "AppDelegate.h"
 #import "Logging.h"
-#import "EntriesViewController.h"
+#import "EntriesMobileViewController.h"
 #import "ServerConfiguration.h"
 @import Intents;
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong, readwrite) EntriesViewController *entriesViewController;
+@property (nonatomic, strong, readwrite) EntriesMobileViewController *entriesViewController;
 
 @end
 
@@ -24,10 +24,10 @@ NSString * const SHORTCUT_ITEM_ADD_ENTRY = @"Add Entry";
 
 #pragma mark - Properties
 
-- (EntriesViewController *)entriesViewController
+- (EntriesMobileViewController *)entriesViewController
 {
     if (!_entriesViewController) {
-        _entriesViewController = [[EntriesViewController alloc] init];
+        _entriesViewController = [[EntriesMobileViewController alloc] init];
     }
     return _entriesViewController;
 }

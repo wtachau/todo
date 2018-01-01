@@ -7,12 +7,12 @@
 //
 
 @import UIKit;
-#import "EntriesDataSource.h"
+#import "EntriesMobileDataSource.h"
 #import "EntriesViewControllerDelegate.h"
 
 @interface EntriesTableView : UITableView
 
-@property (nonatomic, strong, readwrite) EntriesDataSource *entriesDataSource;
+@property (nonatomic, strong, readwrite) EntriesMobileDataSource *entriesDataSource;
 @property (nonatomic, weak, readwrite) NSObject<EntriesViewControllerDelegate> *entriesViewControllerDelegate;
 
 @end

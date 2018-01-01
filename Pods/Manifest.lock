@@ -52,7 +52,7 @@ CHECKOUT OPTIONS:
     :commit: d019eccaeeb5a29a1a271f4d900924e8c202cb2b
     :git: https://github.com/greenbits/papertrail-lumberjack-ios.git
   PKFunctional:
-    :commit: 334265dc756dc59b276604812c218447876117cc
+    :commit: a5d8b5262a25b2451486c11f132b5994176bcbd1
     :git: https://github.com/wtachau/PKFunctional.git
 
 SPEC CHECKSUMS:

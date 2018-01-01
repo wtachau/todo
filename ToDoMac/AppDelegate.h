@@ -6,7 +6,7 @@
 //  Copyright © 2017 Tachau. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 

@@ -6,11 +6,13 @@
 //  Copyright © 2017 Tachau. All rights reserved.
 //
 
-@import UIKit;
+@import Foundation;
 #import "DataSourceDelegate.h"
-@class Type;
+#import "EntryService.h"
+#import "Type.h"
+#import "Entry.h"
 
-@interface EntriesDataSource : NSObject <UITableViewDataSource>
+@interface EntriesDataSource : NSObject 
 
 @property (nonatomic, readwrite, strong) NSArray<Type *> *entryTypes;
 
